@@ -7,6 +7,7 @@
 
 
 def magical_well(a, b, n):
+<<<<<<< HEAD
     result = 0
     while n > 0:
         result += a*b
@@ -18,3 +19,6 @@ def magical_well(a, b, n):
 
 print(magical_well(1, 2, 2))
 
+=======
+    return sum([(a+i)*(b+i) for i in range(n)])
+>>>>>>> upstream/main

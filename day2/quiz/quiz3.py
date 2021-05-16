@@ -12,7 +12,11 @@
 # max_gap ([-54,37,0,64,640,0,-15]) ==> return (576)
 # | 64 - 640 | = 576
 
+from more_itertools import windowed
+
+
 def max_gap(lst):
+<<<<<<< HEAD
     lst.sort()
     mmax = -987654321
     for i in range(len(lst)-1):
@@ -25,3 +29,6 @@ print(max_gap ([13,10,5,2,9]))
 print(max_gap ([-3,-27,-4,-2]))
 print(max_gap ([-7,-42,-809,-14,-12]))
 print(max_gap ([-54,37,0,64,640,0,-15]))
+=======
+    return max(map(lambda x: x[1] - x[0], list(windowed(sorted(lst), n=2))))
+>>>>>>> upstream/main

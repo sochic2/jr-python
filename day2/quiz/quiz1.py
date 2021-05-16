@@ -12,7 +12,11 @@
 # max_product ([10, 3, -1, -27] , 3)  return (-30)
 # 10 * 3 * -1 = -30
 
+from functools import reduce
+
+
 def max_product(obj, k):
+<<<<<<< HEAD
     result = 1
     while k > 0:
         result *= obj.pop(obj.index(max(obj)))
@@ -23,3 +27,8 @@ print(max_product ([4, 3, 5], 2))
 print(max_product ([8, 10 , 9, 7], 3))
 print(max_product([10, 8, 3, 2, 1, 4, 10], 5))
 print(max_product ([10, 3, -1, -27] , 3))
+=======
+    sorted_obj = sorted(obj)
+
+    return reduce(lambda x, y: x * y, sorted_obj[-k:])
+>>>>>>> upstream/main
